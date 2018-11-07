@@ -8,7 +8,11 @@ $black: #000;
 
 
 h1 {
-  color: red;
+  color: maroon;
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  font-weight: bold;
 }
 
 .box {
