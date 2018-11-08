@@ -45,11 +45,21 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
+const onPlayGame = function (event) {
+  event.preventDefault()
+  console.log('new game started!')
+
+  const data = getFormFields(event.target)
+  $(event.target).trigger('reset')
+  api.playGame(data)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('#play-game').on('submit', onPlayGame)
 }
 
 module.exports = {
@@ -57,5 +67,6 @@ module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onPlayGame
 }

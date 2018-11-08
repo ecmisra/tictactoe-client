@@ -24,6 +24,7 @@ const signInSuccess = function (signInResponse) {
   $('#sign-out').removeClass('hidden')
   $('#sign-up').addClass('hidden')
   $('#sign-in').addClass('hidden')
+  $('#play-game').removeClass('hidden')
   // console.log(store.user)
 }
 
@@ -43,11 +44,11 @@ const signOutSuccess = function (signOutResponse) {
   $('#message').html('You signed out successfully.')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
-
   $('#change-password').addClass('hidden')
   $('#sign-out').addClass('hidden')
   $('#sign-up').removeClass('hidden')
   $('#sign-in').removeClass('hidden')
+  $('#play-game').addClass('hidden')
 }
 
 module.exports = {
