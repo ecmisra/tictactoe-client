@@ -43,7 +43,7 @@ const signOutSuccess = function (signOutResponse) {
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
 
-  $('#change-password').removeClass('hidden')
+  $('#change-password').addClass('hidden')
   $('#sign-out').addClass('hidden')
   $('#sign-up').removeClass('hidden')
   $('#sign-in').removeClass('hidden')
