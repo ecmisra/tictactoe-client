@@ -2,62 +2,51 @@
 
 const store = require('../store')
 
-const signUpSuccess = function (data) {
-  $('#message').text('Signed up successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('signUpSuccess ran. Data is :', data)
+const signUpSuccess = function (signUpResponse) {
+  $('#message').html('You signed up successfully.')
+  $('#message').addClass('success-message')
+  $('#message').removeClass('error-message')
+  $('#sign-up').addClass('hidden')
 }
 
-const signUpFailure = function (error) {
-  $('#message').text('Error on sign up')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('signUpFailure ran. Error is :', error)
+const signUpFailure = function (signUpFailureResponse) {
+  $('#message').html('You suck, idiot.')
+  $('#message').removeClass('success-message')
+  $('#message').addClass('error-message')
 }
 
-const signInSuccess = function (data) {
-  $('#message').text('Signed in successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('signInSuccess ran. Data is :', data)
-  store.user = data.user
+const signInSuccess = function (signInResponse) {
+  store.user = signInResponse.user
+  $('#message').html('You signed in successfully.')
+  $('#message').addClass('success-message')
+  $('#message').removeClass('error-message')
+  $('#change-password').removeClass('hidden')
+  $('#sign-out').removeClass('hidden')
+  $('#sign-up').addClass('hidden')
+  $('#sign-in').addClass('hidden')
 }
 
-const signInFailure = function (error) {
-  $('#message').text('Error on sign in')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('signInFailure ran. Error is :', error)
+const signInFailure = function (signInFailureResponse) {
+  $('#message').html('You suck, idiot.')
+  $('#message').removeClass('success-message')
+  $('#message').addClass('error-message')
 }
 
-const signOutSuccess = function () {
-  $('#message').text('Signed out successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('signOutSuccess ran and nothing was returned!')
-  store.user = null
+const changePasswordSuccess = function (changePasswordResponse) {
+  $('#message').html('You changed your password successfully.')
+  $('#message').addClass('success-message')
+  $('#message').removeClass('error-message')
 }
 
-const signOutFailure = function (error) {
-  $('#message').text('Error on sign out')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('signOutFailure ran. Error is :', error)
-}
+const signOutSuccess = function (signOutResponse) {
+  $('#message').html('You signed out successfully.')
+  $('#message').addClass('success-message')
+  $('#message').removeClass('error-message')
 
-const changePasswordSuccess = function () {
-  $('#message').text('Changed password successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('changePasswordSuccess ran and nothing was returned!')
-}
-
-const changePasswordFailure = function (error) {
-  $('#message').text('Error on change password')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('changePasswordFailure ran. Error is :', error)
+  $('#change-password').removeClass('hidden')
+  $('#sign-out').addClass('hidden')
+  $('#sign-up').removeClass('hidden')
+  $('#sign-in').removeClass('hidden')
 }
 
 module.exports = {
@@ -66,7 +55,5 @@ module.exports = {
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure,
-  changePasswordSuccess,
-  changePasswordFailure
+  changePasswordSuccess
 }

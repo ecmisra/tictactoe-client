@@ -13,62 +13,57 @@
     </head>
     <body>
       <h1 class="container-fluid">Tic Tac Toe</h1>
-      <form id="sign-up" class="border">
-          <fieldset>
-            <legend>Sign up!</legend>
-            <input type="text" name="credentials[email]" placeholder="Email">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-            <input type="submit" value="Sign up!">
-          </fieldset>
-        </form>
+      <p id="message"></p>
+      <fieldset>
+      <form id="sign-up">
+            <legend>Sign-Up</legend>
+        <input name="credentials[email]" type="text" placeholder="email"/>
+        <input name="credentials[password]" type="password" placeholder="password"/>
+        <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation"/>
+        <input type="submit"/>
+      </form>
 
-        <form id="sign-in" class="border">
-          <fieldset>
-            <legend>Sign in!</legend>
-            <input type="text" name="credentials[email]" placeholder="Email">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="submit" value="Sign in!">
-          </fieldset>
-        </form>
 
-        <form id="sign-out" class="border">
-          <fieldset>
-            <legend>Sign Out!</legend>
-            <input type="submit" value="Sign out!">
-          </fieldset>
-        </form>
+      <form id="sign-in">
+        <legend>Sign-In</legend>
+        <input name="credentials[email]" type="text" placeholder="email"/>
+        <input name="credentials[password]" type="password" placeholder="password"/>
+        <input type="submit"/>
+      </form>
 
-        <form id="change-password" class="border">
-          <fieldset>
-            <legend>Change Password!</legend>
-            <input type="password" name="passwords[old]" placeholder="Old Password">
-            <input type="password" name="passwords[new]" placeholder="New Password">
-            <input type="submit" value="Change Password!">
+
+      <form id="change-password" class="hidden">
+        <legend>Change Password</legend>
+        <input name="passwords[old]" type="password" placeholder="old password"/>
+        <input name="passwords[new]" type="password" placeholder="new password"/>
+        <input type="submit"/>
+      </form>
+
+      <button id="sign-out" class="hidden">Sign Out</button>
           </fieldset>
         </form>
       <div class="container">
 
         <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">tic tac toe</div>
-          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">tic tac toe</div>
-          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">tic tac toe</div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">0</div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">1</div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">2</div>
         </div>
 
 
 
         <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">tic tac toe</div>
-          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">tic tac toe</div>
-          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">tic tac toe</div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">3</div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">4</div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">5</div>
         </div>
 
 
 
         <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">tic tac toe</div>
-          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">tic tac toe</div>
-          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">tic tac toe</div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">6</div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">7</div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey">8</div>
         </div>
 
 

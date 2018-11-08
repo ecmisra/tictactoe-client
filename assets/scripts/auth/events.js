@@ -8,7 +8,7 @@ const onSignUp = function (event) {
   console.log('sign up ran!')
 
   const data = getFormFields(event.target)
-$(event.target).trigger('reset')
+  $(event.target).trigger('reset')
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -19,7 +19,7 @@ const onSignIn = function (event) {
   console.log('sign in ran!')
 
   const data = getFormFields(event.target)
-$(event.target).trigger('reset')
+  $(event.target).trigger('reset')
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
@@ -28,7 +28,7 @@ $(event.target).trigger('reset')
 const onSignOut = function (event) {
   event.preventDefault()
   console.log('sign out ran')
-$(event.target).trigger('reset')
+  $(event.target).trigger('reset')
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
@@ -39,7 +39,7 @@ const onChangePassword = function (event) {
   console.log('change password ran!')
 
   const data = getFormFields(event.target)
-$(event.target).trigger('reset')
+  $(event.target).trigger('reset')
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
@@ -53,5 +53,9 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onSignUp,
+  onSignIn,
+  onChangePassword,
+  onSignOut
 }

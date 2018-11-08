@@ -20,7 +20,7 @@ h1 {
   border: 1px solid $white;
   color: $font-color;
   display: flex;
-  height: 200px;
+  height: 250px;
   justify-content: center;
 }
 
@@ -30,4 +30,8 @@ h1 {
 
 .teal {
   background-color: $teal;
+}
+
+.hidden {
+  visibility: hidden;
 }
