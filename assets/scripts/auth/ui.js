@@ -24,6 +24,7 @@ const signInSuccess = function (signInResponse) {
   $('#sign-out').removeClass('hidden')
   $('#sign-up').addClass('hidden')
   $('#sign-in').addClass('hidden')
+  // console.log(store.user)
 }
 
 const signInFailure = function (signInFailureResponse) {
