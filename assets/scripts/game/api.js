@@ -31,20 +31,22 @@ const playGame = function (data) {
 const updateGame = function (id, value) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + `/games/${store.game.id}`,
+    url: config.apiUrl + `/games/${store.gameBoard.id}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
     contentType: 'application/json',
-    data: {
-      'game': {
-        'cell': {
-          'index': id,
-          'value': value
-        },
-        'over': false
+    data: JSON.stringify(
+      {
+        'game': {
+          'cell': {
+            'index': id,
+            'value': value
+          },
+          'over': false
+        }
       }
-    }
+    )
   })
 }
 

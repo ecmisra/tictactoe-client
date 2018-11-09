@@ -25,7 +25,11 @@ const onUpdateGame = function (event) {
   store.gameBoard[id] = player
   console.log(id)
   console.log(store)
+  api.updateGame(id, player)
+    .then()
+    .catch()
 }
+
 
 // let whichTurn = (0)
 //
