@@ -30,7 +30,7 @@ const playGame = function () {
 const updateGame = function (id, value) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + `/games/${store.game.game.id}`,
+    url: config.apiUrl + `/games/${store.game}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },

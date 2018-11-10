@@ -1,4 +1,4 @@
-const getFormFields = require(`../../../lib/get-form-fields`)
+// const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('../store')
@@ -20,7 +20,7 @@ const player = 'x'
 const onUpdateGame = function (event) {
   const data = $(event.target).data()
   const id = data.cellIndex
-  store.gameBoard[id] = player
+  store.cells[id] = player
   console.log(id)
   console.log(store)
   api.updateGame(id, player)
@@ -52,4 +52,5 @@ module.exports = {
   addHandlers,
   onPlayGame,
   onUpdateGame
+  // getFormFields
 }
