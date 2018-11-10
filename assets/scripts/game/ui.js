@@ -9,6 +9,7 @@ const playGameSuccess = function (playGameResponse) {
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
   $('#board').removeClass('hidden')
+  // $('#message').html(`Total games played: ${playGameResponse.games.length}`)
 }
 
 const failure = function (game) {
@@ -17,14 +18,18 @@ const failure = function (game) {
   $('#message').addClass('error-message')
 }
 
-const updateMove = function (move) {
-  $('#grid').click(function () {
-    $('div').append('x')
-  })
-}
+// Append move to gameboard func (not working)
+// v
+// const markSquare = function (cell) {
+//   $('#0').append('x')
+// }
+//
+// const updateMove = function (move) {
+//   $('.grid').on('click', markSquare)
+// }
 
 module.exports = {
   playGameSuccess,
-  failure,
-  updateMove
+  failure
+  // updateMove
 }

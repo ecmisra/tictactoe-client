@@ -49,6 +49,7 @@ const signOutSuccess = function (signOutResponse) {
   $('#sign-up').removeClass('hidden')
   $('#sign-in').removeClass('hidden')
   $('#play-game').addClass('hidden')
+  $('#board').addClass('hidden')
 }
 
 module.exports = {

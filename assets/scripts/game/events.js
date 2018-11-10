@@ -1,7 +1,8 @@
 // const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api.js')
 const ui = require('./ui.js')
-const store = require('../store')
+const store = require('../store.js')
+const gameLogic = require('./gamelogic.js')
 
 const onPlayGame = function (event) {
   event.preventDefault()
@@ -15,17 +16,19 @@ const addHandlers = () => {
   $('#play-game').on('submit', onPlayGame)
 }
 
-const player = 'x'
-
 const onUpdateGame = function (event) {
+  event.preventDefault()
   const data = $(event.target).data()
   const id = data.cellIndex
+  const player = store.player
   store.cells[id] = player
-  console.log(id)
   console.log(store)
   api.updateGame(id, player)
     .then()
     .catch()
+  gameLogic.switchPlayer(player)
+  console.log(store.cells)
+  gameLogic.winningPlays(store.cells)
 }
 
 // let whichTurn = (0)
