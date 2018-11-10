@@ -6,6 +6,6 @@ const store = {
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 
 module.exports = {
-store,
-gameBoard
+  store,
+  gameBoard
 }

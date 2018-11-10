@@ -1,16 +1,14 @@
 const getFormFields = require(`../../../lib/get-form-fields`)
-
 const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('../store')
 
-
 const onPlayGame = function (event) {
   event.preventDefault()
   console.log('new game started!')
-  const data = getFormFields(event.target)
-  $(event.target).trigger('reset')
-  api.playGame(data)
+  api.playGame()
+    .then(ui.playGameSuccess)
+    .catch()
 }
 
 const addHandlers = () => {
@@ -29,7 +27,6 @@ const onUpdateGame = function (event) {
     .then()
     .catch()
 }
-
 
 // let whichTurn = (0)
 //

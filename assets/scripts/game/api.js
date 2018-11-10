@@ -15,15 +15,14 @@ const getGame = (data) => {
   })
 }
 
-const playGame = function (data) {
+const playGame = function () {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
-    contentType: 'application/json',
-    data: JSON.stringify(data)
+    contentType: 'application/json'
   })
 }
 // console.log(data)
@@ -31,7 +30,7 @@ const playGame = function (data) {
 const updateGame = function (id, value) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + `/games/${store.gameBoard.id}`,
+    url: config.apiUrl + `/games/${store.game.game.id}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
