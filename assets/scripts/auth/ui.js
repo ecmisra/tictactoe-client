@@ -7,6 +7,7 @@ const signUpSuccess = function (signUpResponse) {
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
   $('#sign-up').addClass('hidden')
+  // $('#score-display').addClass('hidden')
 }
 
 const signUpFailure = function (signUpFailureResponse) {
@@ -25,6 +26,7 @@ const signInSuccess = function (signInResponse) {
   $('#sign-up').addClass('hidden')
   $('#sign-in').addClass('hidden')
   $('#play-game').removeClass('hidden')
+  $('#score-display').addClass('hidden')
   // console.log(store.user)
 }
 
@@ -50,6 +52,8 @@ const signOutSuccess = function (signOutResponse) {
   $('#sign-in').removeClass('hidden')
   $('#play-game').addClass('hidden')
   $('#board').addClass('hidden')
+  $('#get-score').addClass('hidden')
+  $('#score-display').addClass('hidden')
 }
 
 module.exports = {

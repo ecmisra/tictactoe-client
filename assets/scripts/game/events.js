@@ -12,8 +12,23 @@ const onPlayGame = function (event) {
     .catch()
 }
 
-const addHandlers = () => {
+const addHandlers = function () {
   $('#play-game').on('submit', onPlayGame)
+}
+
+// const scoreDisplay = function () {
+//   // const getScore = function () {
+//   $('#get-score').on('click',
+//     // getScore)
+//     // const score = store.games.length
+//     // $('#score-display').html('Score is ' + score)
+//     console.log('huh'))
+// }
+
+const onGetScore = function (event) {
+  event.preventDefault()
+  api.getGame()
+    .then(ui.onGetScoreSuccess)
 }
 
 const onUpdateGame = function (event) {
@@ -34,6 +49,7 @@ const onUpdateGame = function (event) {
 module.exports = {
   addHandlers,
   onPlayGame,
-  onUpdateGame
+  onUpdateGame,
+  onGetScore
   // getFormFields
 }

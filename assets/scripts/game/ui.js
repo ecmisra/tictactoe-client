@@ -12,7 +12,9 @@ const playGameSuccess = function (playGameResponse) {
   $('#message').removeClass('error-message')
   $('#board').removeClass('hidden')
   $('#change-password').addClass('hidden')
+  $('#get-score').removeClass('hidden')
   $('.grid').empty()
+  // $('#score-display').addClass('hidden')
   // $('#message').html(`Total games played: ${playGameResponse.games.length}`)
 }
 const clearMessage = function () {
@@ -45,6 +47,7 @@ const updateMove = function (id) {
   } else if (store.player === 'o' && store.over === false && store.cells[id] === '') {
     $($(event.target)).html(store.player)
   }
+
   // if (store.player.id === 'x') {
   //   $('#message').html('x is playing')
   // } else if (store.player.id === 'o') {
@@ -52,8 +55,13 @@ const updateMove = function (id) {
   // }
 }
 
+const onGetScoreSuccess = function (event) {
+  $('#score-display').html(`Total games played:${event.games.length}`)
+  $('#score-display').removeClass('hidden')
+}
 module.exports = {
   playGameSuccess,
   failure,
-  updateMove
+  updateMove,
+  onGetScoreSuccess
 }
