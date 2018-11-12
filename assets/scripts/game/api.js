@@ -27,7 +27,7 @@ const playGame = function () {
 }
 // console.log(data)
 
-const updateGame = function (id, value) {
+const updateGame = function (id, value, over) {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + `/games/${store.game}`,
@@ -42,7 +42,7 @@ const updateGame = function (id, value) {
             'index': id,
             'value': value
           },
-          'over': false
+          'over': over
         }
       }
     )

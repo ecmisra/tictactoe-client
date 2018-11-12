@@ -18,38 +18,18 @@ const addHandlers = () => {
 
 const onUpdateGame = function (event) {
   event.preventDefault()
-  const data = $(event.target).data()
-  const id = data.cellIndex
+  const id = $(event.target).data().cellIndex
   const player = store.player
-  store.cells[id] = player
+  const over = store.over
   console.log(store)
   api.updateGame(id, player)
-    .then()
+    .then(ui.updateMove(id))
     .catch()
+  gameLogic.rules(id, player, over)
   gameLogic.switchPlayer(player)
   console.log(store.cells)
   gameLogic.winningPlays(store.cells)
 }
-
-// let whichTurn = (0)
-//
-// const whosTurnIsIt = function (aTurn) {
-//   let chance = ('x')
-//   if (aTurn % 2 === 0) {
-//     chance = 'x'
-//   } else {
-//     chance = 'o'
-//   }
-//   return chance
-// }
-//
-// for (let i = 0; i < 9; i++) {
-//   const whosTurn = whosTurnIsIt(whichTurn)
-//   // console.log('whichTurn', whichTurn)
-//   whichTurn++
-//   // console.log('whosTurn', whosTurn)
-//   whosTurnIsIt(0, 'x')
-// }
 
 module.exports = {
   addHandlers,

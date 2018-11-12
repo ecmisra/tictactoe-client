@@ -16,10 +16,11 @@ h1 {
 .box {
   align-items: center;
   border: 5px solid $white;
-  color: $font-color;
   display: flex;
   height: 250px;
   justify-content: center;
+  color: white;
+  font-size: 50px;
 }
 
 .grey {
