@@ -9,6 +9,7 @@ const switchPlayer = function (playerId) {
   if (store.misclick === 'click') {
     const player = playerId === 'x' ? 'o' : 'x'
     store.player = player
+    $('#message').html(`Player: ${store.player}'s Turn`)
     return player
   }
 }
@@ -22,6 +23,7 @@ const rules = function (id, value, over) {
     console.log('niiiiice')
     store.misclick = 'click'
   } else if (store.cells[id] === 'x' || 'o') {
+    $('#message').html('Cannot click here')
     console.log('already played here, try somewhere else')
     store.misclick = 'misclick'
   }

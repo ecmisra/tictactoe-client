@@ -11,6 +11,7 @@ const playGameSuccess = function (playGameResponse) {
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
   $('#board').removeClass('hidden')
+  $('#change-password').addClass('hidden')
   $('.grid').empty()
   // $('#message').html(`Total games played: ${playGameResponse.games.length}`)
 }
@@ -18,7 +19,6 @@ const clearMessage = function () {
   $('#message').empty()
 }
 $('.grid').click('#message', clearMessage)
-
 // trying to get board to display 'x' or 'o' on corresponding grid
 // square vvv
 //
