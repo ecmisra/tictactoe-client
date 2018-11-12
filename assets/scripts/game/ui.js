@@ -14,7 +14,7 @@ const playGameSuccess = function (playGameResponse) {
   $('#change-password').addClass('hidden')
   $('#get-score').removeClass('hidden')
   $('.grid').empty()
-  // $('#score-display').addClass('hidden')
+  $('#score-display').addClass('hidden')
   // $('#message').html(`Total games played: ${playGameResponse.games.length}`)
 }
 const clearMessage = function () {
