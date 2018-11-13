@@ -4,10 +4,10 @@ const playGameSuccess = function (playGameResponse) {
   store.game = playGameResponse.game.id
   store.cells = playGameResponse.game.cells
   store.over = playGameResponse.game.over
-  console.log(store)
+  // console.log(store)
   // const gameId = store.game.game.id
   // console.log(gameId)
-  $('#message').html('Let the game begin!')
+  $('#message').html('Let the game(s) begin!')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
   $('#board').removeClass('hidden')
@@ -15,6 +15,7 @@ const playGameSuccess = function (playGameResponse) {
   $('#get-score').removeClass('hidden')
   $('.grid').empty()
   $('#score-display').addClass('hidden')
+  $('#rules-message').addClass('hidden')
   // $('#message').html(`Total games played: ${playGameResponse.games.length}`)
 }
 const clearMessage = function () {
@@ -38,12 +39,12 @@ const failure = function (game) {
 // v
 //
 const updateMove = function (id) {
-  console.log(id)
-  console.log(store.player)
-  console.log(store.over)
+  // console.log(id)
+  // console.log(store.player)
+  // console.log(store.over)
   if (store.player === 'x' && store.over === false && store.cells[id] === '') {
     $($(event.target)).html(store.player)
-    console.log('hello')
+    // console.log('hello')
   } else if (store.player === 'o' && store.over === false && store.cells[id] === '') {
     $($(event.target)).html(store.player)
   }

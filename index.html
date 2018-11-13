@@ -2,8 +2,8 @@
 <html>
     <head>
       <title>Tic Tac Toe</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -13,10 +13,17 @@
     </head>
     <body>
       <h1>Tic Tac Toe</h1>
+
+<p id="rules-message" class="hidden">Welcome to Tic Tac Toe! The game where you try to win,
+  and if not win, then lose with some dignity.<br>X goes first, O goes second.
+Get three in a row, and you're the winner, bro!<br>Click 'Play!' to start the game,
+and when you've finished, click it again to start a new game. <br>...'Sign Out' should
+be pretty self-explanatory. Now, have fun!
+</p>
       <!-- <fieldset> -->
       <form id="sign-up">
         <legend>Sign-Up</legend>
-        <input name="credentials[email]" type="text" placeholder="email">
+        <input name="credentials[email]" type="email" placeholder="email">
         <input name="credentials[password]" type="password" placeholder="password">
         <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
         <input type="submit">
@@ -25,7 +32,7 @@
 
       <form id="sign-in">
         <legend>Sign-In</legend>
-        <input name="credentials[email]" type="text" placeholder="email">
+        <input name="credentials[email]" type="email" placeholder="email">
         <input name="credentials[password]" type="password" placeholder="password">
         <input type="submit">
       </form>

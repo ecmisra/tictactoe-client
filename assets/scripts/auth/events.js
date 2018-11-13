@@ -5,7 +5,7 @@ const ui = require('./ui.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('sign up ran!')
+  // console.log('sign up ran!')
 
   const data = getFormFields(event.target)
   $(event.target).trigger('reset')
@@ -16,7 +16,7 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('sign in ran!')
+  // console.log('sign in ran!')
   const data = getFormFields(event.target)
   $(event.target).trigger('reset')
   api.signIn(data)
@@ -26,7 +26,7 @@ const onSignIn = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('sign out ran')
+  // console.log('sign out ran')
   $(event.target).trigger('reset')
   api.signOut()
     .then(ui.signOutSuccess)
@@ -35,7 +35,7 @@ const onSignOut = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('change password ran!')
+  // console.log('change password ran!')
 
   const data = getFormFields(event.target)
   $(event.target).trigger('reset')
