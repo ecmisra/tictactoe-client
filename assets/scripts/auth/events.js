@@ -41,7 +41,7 @@ const onChangePassword = function (event) {
   $(event.target).trigger('reset')
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
-    .catch(ui.changePasswordFailure)
+    .catch(ui.signInFailure)
 }
 
 // const onPlayGame = function (event) {
