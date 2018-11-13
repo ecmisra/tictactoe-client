@@ -42,7 +42,7 @@ const winningPlays = function (gameboard) {
     store.winner = 'x'
     store.player = 'x'
     store.over = true
-    $('#message').html('x is winner!')
+    $('#message').html('x wins!')
   } else if ((gameboard[0] === 'o' && gameboard[1] === 'o' && gameboard[2] === 'o') ||
 (gameboard[3] === 'o' && gameboard[4] === 'o' && gameboard[5] === 'o') ||
 (gameboard[6] === 'o' && gameboard[7] === 'o' && gameboard[8] === 'o') ||
@@ -55,7 +55,7 @@ const winningPlays = function (gameboard) {
     store.player = 'x'
     store.winner = 'o'
     store.over = true
-    $('#message').html('o is winner!')
+    $('#message').html('o wins!')
   } else if (gameboard[0] !== '' && gameboard[1] !== '' && gameboard[2] !== '' &&
  gameboard[3] !== '' && gameboard[4] !== '' && gameboard[5] !== '' &&
  gameboard[6] !== '' && gameboard[7] !== '' && gameboard[8] !== '') {
