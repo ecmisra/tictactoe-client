@@ -24,7 +24,7 @@ The hardest part overall, for me, was mentally understanding the relationship be
 
 ### Wireframe
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/qKsJVyC"><a href="//imgur.com/qKsJVyC"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![Eshan Misra tictactoe wireframe](https://i.imgur.com/0Zp7qpt.jpg)
 
 
 ### Future Improvements/Plans
