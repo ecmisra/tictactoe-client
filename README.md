@@ -28,3 +28,5 @@ The hardest part overall, for me, was mentally understanding the relationship be
 
 
 ### Future Improvements/Plans
+
+In the coming weeks/months, I plan to return to this project and improve it for my portfolio. No concrete plans yet necessarily, but I plan to revisit the styling (I like the color/font choices I made, but I can certainly add some fancier styling features.) Maybe mike the sign up/in fields modals than slide down from a nav bar, or disappear/reappear in a more visually impressive manner. I'd also like to fix the positioning of the actual gameboard on my page (make it more centered, ideally). Just some examples of things I hope to improve.
