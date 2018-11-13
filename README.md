@@ -1,2 +1,7 @@
 # Tic Tac Toe README
-### GA WDI28 Project 1
+## GA Boston WDI28 Project 1
+### By: Eshan Misra
+
+#### Planning/Approach
+
+Upon starting this project, I
