@@ -11,7 +11,7 @@ const signUpSuccess = function (signUpResponse) {
 }
 
 const signUpFailure = function (signUpFailureResponse) {
-  $('#message').html('You suck, idiot.')
+  $('#message').html('Ya blew it, bud. Try again.')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
 }
@@ -32,13 +32,13 @@ const signInSuccess = function (signInResponse) {
 }
 
 const signInFailure = function (signInFailureResponse) {
-  $('#message').html('You suck, idiot.')
+  $('#message').html('Ya blew it, bud. Try again.')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
-  $('#message').html('You have successfully changed your password, you paranoid creep.')
+  $('#message').html('You have successfully changed your password. Feeling paranoid, are we?')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
 }

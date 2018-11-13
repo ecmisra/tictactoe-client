@@ -11,7 +11,7 @@ const playGameSuccess = function (playGameResponse) {
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
   $('#board').removeClass('hidden')
-  $('#change-password').addClass('hidden')
+  // $('#change-password').addClass('hidden')
   $('#get-score').removeClass('hidden')
   $('.grid').empty()
   $('#score-display').addClass('hidden')
@@ -30,7 +30,7 @@ $('.grid').click('#message', clearMessage)
 // }
 
 const failure = function (game) {
-  $('#message').html('You suck, idiot.')
+  $('#message').html('Ya blew it, bud. Try again.')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
 }
