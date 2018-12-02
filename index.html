@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Tac Toe</title>
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>#Tic Tac Toe#</h1>
+
+<p id="rules-message" class="hidden">Welcome to Tic Tac Toe! The game where you try to win,
+  and if not win, then lose with some dignity.<br>X goes first, O goes second.
+Get three in a row, and you're the winner, bro!<br>Click 'Play!' to start the game,
+and when you've finished, click it again to start a new game. <br>...'Sign Out' should
+be pretty self-explanatory. Now, have fun!
+</p>
+      <!-- <fieldset> -->
+      <form id="sign-up">
+        <legend>Sign-Up</legend>
+        <input name="credentials[email]" type="email" placeholder="email">
+        <input name="credentials[password]" type="password" placeholder="password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
+        <input type="submit">
+      </form>
+
+
+      <form id="sign-in">
+        <legend>Sign-In</legend>
+        <input name="credentials[email]" type="email" placeholder="email">
+        <input name="credentials[password]" type="password" placeholder="password">
+        <input type="submit">
+      </form>
+
+
+      <form id="change-password" class="hidden">
+        <legend>Change Password</legend>
+        <input name="passwords[old]" type="password" placeholder="old password">
+        <input name="passwords[new]" type="password" placeholder="new password">
+        <input type="submit">
+      </form>
+
+      <button id="sign-out" class="hidden">Sign Out</button>
+      <button id="play-game" class="hidden">Play!</button>
+      <button id="get-score" class="hidden">Get Score</button>
+      <!-- </fieldset> -->
+      <h3 id="message"></h3>
+      <h5 id="score-display" class="hidden"></h5>
+
+      <div id="board" class="hidden">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey grid" data-cell-index="0"></div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey grid" data-cell-index="1"></div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey grid" data-cell-index="2"></div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey grid" data-cell-index="3"></div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey grid" data-cell-index="4"></div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey grid" data-cell-index="5"></div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey grid" data-cell-index="6"></div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey grid" data-cell-index="7"></div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-4 box grey grid" data-cell-index="8"></div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+    </body>
+</html>
