@@ -27,6 +27,21 @@ The hardest part overall, for me, was mentally understanding the relationship be
 ![Eshan Misra tictactoe wireframe](https://i.imgur.com/0Zp7qpt.jpg)
 
 
+### User Stories
+
+* As a user, I want to be able to sign up for new account with email and password
+* As a user, I want to be able to sign in after creating an account
+* As a user, I want the option to change my password when signed in
+* As a user, I want an error message if I did something incorrectly
+* As a user, I don't want to see the gameboard until I press a play/new game button
+* As a user, I want to be able to play just by clicking on grid I want
+* As a user, I want to know who's turn it is (x or o)
+* As a user, I want to be notified when there's a win (or a tie)
+* As a user, I want to know who that winner is.
+* As a user, after I finish a game, I want to be able to easily restart a new game
+* As a user, I want to be able to find out how many games have been played
+* As a user, I want to be able to sign out, ensuring that no one can play on my account or change my password
+
 ### Future Improvements/Plans
 
 In the coming weeks/months, I plan to return to this project and improve it for my portfolio. No concrete plans yet necessarily, but I plan to revisit the styling (I like the color/font choices I made, but I can certainly add some fancier styling features.) Maybe mike the sign up/in fields modals than slide down from a nav bar, or disappear/reappear in a more visually impressive manner. I'd also like to fix the positioning of the actual gameboard on my page (make it more centered, ideally). Just some examples of things I hope to improve.
